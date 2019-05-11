@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Meet Your Best Friend</h1>
+        <hr />
+        <h2>Find the one person compatible to you!</h2>
+    </div>
+
+    <div class=container>
+        <h2>Survey Questions</h2>
+        <hr />
+        <!-- things about you -->
+
+        <!-- 10 Questions -->
+        <h3>Question 1</h3>
+        <h4>Do I consider myself creative person?</h4>
+        <select data-placeholder="" class="chosen-select" id=quest1>
+            <option value=""></option>
+            <option value="1">1 (Not creative at all)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very creative)</option>
+        </select>
+
+        <h3>Question 2</h3>
+        <h4>Are you an outdoor person who likes to camp, hike and spend time outside? </h4>
+        <select data-placeholder="" class="chosen-select" id=quest2>
+            <option value=""></option>
+            <option value="1">1 (Indoor person)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Outdoor person)</option>
+        </select>
+
+        <h3>Question 3</h3>
+        <h4>Do you like pets? Dogs, cats even unusual pets. </h4>
+        <select data-placeholder="" class="chosen-select" id=quest3>
+            <option value=""></option>
+            <option value="1">1 (Allergic/no patience for pets)</option>
+            <option value="2">2</option>
+            <option value="3">3 (Like only dogs or cats)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Like all animals)</option>
+        </select>
+
+        <h3>Question 4</h3>
+        <h4>Do you consider lots of money an important goal? </h4>
+        <select data-placeholder="" class="chosen-select" id=quest4>
+            <option value=""></option>
+            <option value="1">1 (Money is very important to me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Money does not define me)</option>
+        </select>
+
+        <h3>Question 5</h3>
+        <h4>Do you enjoy quit times? </h4>
+        <select data-placeholder="" class="chosen-select" id=quest5>
+            <option value=""></option>
+            <option value="1">1 (Cannot stay still)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Enjoy reading, writing or painting)</option>
+        </select>
+
+        <h3>Question 6</h3>
+        <h4>Do you like to travel? Whether it is driving, on a cruise, or the plan flight to get there.</h4>
+        <select data-placeholder="" class="chosen-select" id=quest6>
+            <option value=""></option>
+            <option value="1">1 (Don’t like to travel)</option>
+            <option value="2">2</option>
+            <option value="3">3 (Driving or flying to get there not fun)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Love it all)</option>
+        </select>
+
+        <h3>Question 7</h3>
+        <h4>Do you like taking risks for the thrill? </h4>
+        <select data-placeholder="" class="chosen-select" id=quest7>
+            <option value=""></option>
+            <option value="1">1 (Thrill seeker)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Steady person)</option>
+        </select>
+
+        <h3>Question 8</h3>
+        <h4>Do you need to exercise regularly? </h4>
+        <select data-placeholder="" class="chosen-select" id=quest8>
+            <option value=""></option>
+            <option value="1">1 (Not at all)</option>
+            <option value="2">2</option>
+            <option value="3">3 (Every other day)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Every day)</option>
+        </select>
+
+        <h3>Question 9</h3>
+        <h4>Do you forgive people quickly and completely? </h4>
+        <select data-placeholder="" class="chosen-select" id=quest9>
+            <option value=""></option>
+            <option value="1">1 (I hold a grudge forever)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (I forgive easily)</option>
+        </select>
+
+        <h3>Question 10</h3>
+        <h4>Is communication important to you? </h4>
+        <select data-placeholder="" class="chosen-select" id=quest10>
+            <option value=""></option>
+            <option value="1">1 (I forget to call)</option>
+            <option value="2">2</option>
+            <option value="3">3 (Talk to you occasionally only)</option>
+            <option value="4">4</option>
+            <option value="5">5 (Call or see you daily)</option>
+        </select>
+                                               
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
