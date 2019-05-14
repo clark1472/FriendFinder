@@ -2,7 +2,7 @@ var friends = [
     {
         name: "Dave Clark",
         photo: "/images.DaveClark.jpg",
-        scores: [5, 2, 4, 4, 5, 3, 2, 5, 4, 4]
+        scores: [5, 5, 4, 4, 5, 3, 5, 5, 4, 5]
     },
     {
         name: "Joe Smith",
@@ -22,8 +22,8 @@ var friends = [
     {
         name: "Harrison Ford",
         photo: "/images.HarrisonFord.jpg",
-        scores: [1, 1, 1, 5, 5, 5, 3, 5, 3, 3]
-    },
+        scores: [1, 1, 1, 5, 2, 5, 3, 2, 3, 3]
+    }
 ];
 
 module.exports = friends;

@@ -146,7 +146,7 @@
         <br />
         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         <br />
-        
+
         <!-- Modal Popup -->
         <div class="modal" id="myModal">
             <div class="modal-dialog">
@@ -168,13 +168,59 @@
         </div> <!-- close of modal -->
 
         <!-- End of Modal -->
-
-        <footer class="footer text-center">
-            <div class="container">
-                &copy Copyright 2019
-            </div>
-        </footer>
     </div>
-</body>
+    <footer class="footer text-center">
+        <div class="container">
+            &copy Copyright 2019
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+
+    <script type="text/javascript">
+        $("#submit").on("click", function () {
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") isValid = false;
+                });
+                $(".chosen-select").each(function () {
+                    if ($(this).val() === "") isValid = false;
+                });
+                return isValid;
+            }
+            if (validateForm() === true) {
+                var newUser = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#quest1").val(),
+                        $("#quest2").val(),
+                        $("#quest3").val(),
+                        $("#quest4").val(),
+                        $("#quest5").val(),
+                        $("#quest6").val(),
+                        $("#quest7").val(),
+                        $("#quest8").val(),
+                        $("#quest9").val(),
+                        $("#quest10").val(),
+                    ]
+                };
+                var currentURL = window.location.origin;
+                //var currentURL = "file:///C:/Users/chris/Desktop/ClassAssignments/13-express/02-Homework/FriendFinder/app/public/survey.html";
+                console.log(currentURL + "/api/friends");
+                $.post(currentURL + "/api/friends", newUser, function(data) {
+                    $("#bestFriend").text(data.name);
+                    $("#bestFriendPhoto").attr("src", data.photo);
+                    $("#bestFriendModal").modal("toggle");
+                     });
+                 } else {
+                    alert("Please complete all fields before submitting");
+                 }
+            });
+        </script>
+    </body>
 
 </html>

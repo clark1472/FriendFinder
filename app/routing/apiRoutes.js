@@ -12,11 +12,11 @@ module.exports = function(app) {
 
     var user = req.body;
 
-    for (var i = 0; i < user.score.length; i++) {
-        user.score[i] = parseInt(user.scores[i]);
+    for (var i = 0; i < user.scores.length; i++) {
+        user.scores[i] = parseInt(user.scores[i]);
         }
         //The friend with the score closest to 0, (minimum difference) matches the user as best friend. If choices are 5-1=4 4*10 = 40 questions. That would be total opposite.
-        var bestfriendScore = 0;
+        var bestfriendIndex = 0;
         var minimumDifference = 40;
 
         //compares user with
@@ -31,7 +31,7 @@ module.exports = function(app) {
             bestFriendIndex = i;
             minimumDifference = totalDifference;
         }
-    }   
+    }
         friends.push(user);
         res.json(friends[bestFriendIndex]);
 
