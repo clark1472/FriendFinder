@@ -2,10 +2,13 @@
 var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
-
-// Express App
 var app = express();
+
+//set port heroku sets port or 8080
 var PORT = process.env.PORT || 8080;
+
+//allows us to serve static files: images, css, html
+app.use(express.static(__dirname));
 
 // Data parsing Express app 
 //app.use(express.urlencoded({ extended: true }));
@@ -19,6 +22,10 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // The API and HTML routes
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
+//must check this route DOES THIS NEED TO BE INDEX OR HOME????
+app.get("/", function(req, res) {
+  res.render("./app/public/home");
+});
 
 //confirmation server is listening
 app.listen(PORT, function() {
