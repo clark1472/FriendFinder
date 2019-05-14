@@ -208,10 +208,9 @@
                         $("#quest10").val(),
                     ]
                 };
-                var currentURL = window.location.origin;
-                //var currentURL = "file:///C:/Users/chris/Desktop/ClassAssignments/13-express/02-Homework/FriendFinder/app/public/survey.html";
-                console.log(currentURL + "/api/friends");
-                $.post(currentURL + "/api/friends", newUser, function(data) {
+              
+                $.post("/api/friends", newUser, function(data) {
+                    
                     $("#bestFriend").text(data.name);
                     $("#bestFriendPhoto").attr("src", data.photo);
                     $("#bestFriendModal").modal("toggle");
