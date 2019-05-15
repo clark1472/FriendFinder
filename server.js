@@ -8,7 +8,7 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 //allows us to serve static files: images, css, html
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + "/public"));
 
 // Data parsing Express app 
 //app.use(express.urlencoded({ extended: true }));
